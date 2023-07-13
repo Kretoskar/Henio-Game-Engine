@@ -817,6 +817,7 @@
     <ClInclude Include="src\ECS\Base\BaseComponent.h" />
     <ClInclude Include="src\ECS\Base\BaseSystem.h" />
     <ClInclude Include="src\ECS\Base\CompList.h" />
+    <ClInclude Include="src\ECS\Base\Entity.h" />
     <ClInclude Include="src\ECS\Base\EntityManager.h" />
     <ClInclude Include="src\ECS\Base\Types.h" />
     <ClInclude Include="src\ECS\ECS.h" />

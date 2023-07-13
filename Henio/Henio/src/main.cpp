@@ -14,10 +14,16 @@
 #include "Input/Public/Mouse.h"
 #include "Input/Public/Gamepad.h"
 #include "Components/Public/Camera.h"
+#include "ECS/Base/BaseComponent.h"
+#include "ECS/Base/EntityManager.h"
+#include "ECS/Base/Types.h"
+#include "Engine/Engine.h"
+#include "Events/Events.h"
 #include "Output/Public/Screen.h"
 #include "Rendering/Public/Texture.h"
 #include "Rendering/Models/Public/Cube.hpp"
 #include "Rendering/Models/Public/Lamp.hpp"
+#include "Timer/Timer.h"
 
 void processInput(double deltaTime);
 
@@ -32,32 +38,40 @@ Screen screen;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+class TestComp1 : public ECS::BaseComponent
+{
+	
+};
+
 int main()
 {
-	glfwInit();
+	ECS::EntityManager manager;
+	auto id = manager.AddNewEntity();
+	auto id1 = manager.AddNewEntity();
+	std::cout << id << " " << id1 << std::endl;
+
+	manager.DestroyEntity(id1);
+	auto id2 = manager.AddNewEntity();
+
 	
-	// using 3.3 as it's the doc supported version
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	auto typeID1 = ECS::CompType<TestComp1>();
+	std::cout << id << " " << id2 << " " << typeID1;
+	
+	Henio::Core.Initialize();
+	Henio::Timer.Initialize();
+	Henio::Event.Initialiaze();
 
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-	if (!screen.Init())
+	while (!Henio::Core.ShouldClose())
 	{
-		std::cout << "Failed to create window" << std::endl;
-		glfwTerminate();
-		return -1;
+		Henio::Timer.Tick();
+		Henio::Event.Poll();
+		Henio::Core.Update();
 	}
 
-	// init GLAD
-	if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)))
-	{
-		std::cout << "Failed to initialize GLAD" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-
-	screen.SetParameters();
+	return 0;
+	
+	
+	// --------------------
 	
 	Shader shader("assets/vertex_core.glsl", "assets/fragment_core.glsl");
 

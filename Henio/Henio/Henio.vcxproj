@@ -209,6 +209,8 @@
       <AdditionalIncludeDirectories>C:\_Projekty\HenioGameEngine\Henio\Henio\src;</AdditionalIncludeDirectories>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="src\Engine\Engine.cpp" />
+    <ClCompile Include="src\Events\Events.cpp" />
     <ClCompile Include="src\Input\Private\Gamepad.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -804,6 +806,7 @@
       <AdditionalIncludeDirectories>C:\_Projekty\HenioGameEngine\Henio\Henio\src;</AdditionalIncludeDirectories>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="src\Timer\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\fragment_core.glsl" />
@@ -811,6 +814,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Components\Public\Camera.h" />
+    <ClInclude Include="src\ECS\Base\BaseComponent.h" />
+    <ClInclude Include="src\ECS\Base\BaseSystem.h" />
+    <ClInclude Include="src\ECS\Base\CompList.h" />
+    <ClInclude Include="src\ECS\Base\EntityManager.h" />
+    <ClInclude Include="src\ECS\Base\Types.h" />
+    <ClInclude Include="src\ECS\ECS.h" />
+    <ClInclude Include="src\Engine\Engine.h" />
+    <ClInclude Include="src\Events\Events.h" />
     <ClInclude Include="src\Input\Public\Gamepad.h" />
     <ClInclude Include="src\Input\Public\Keyboard.h" />
     <ClInclude Include="src\Input\Public\Mouse.h" />
@@ -823,9 +834,14 @@
     <ClInclude Include="src\Rendering\Public\Model.h" />
     <ClInclude Include="src\Rendering\Public\Shader.h" />
     <ClInclude Include="src\Rendering\Public\Texture.h" />
+    <ClInclude Include="src\Timer\Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\lamp.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\ECS\Components" />
+    <Folder Include="src\ECS\Systems" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,6 @@
 ﻿#include "Framebuffer.h"
-#include <imgui/imgui_impl_glfw.h>
-#include <imgui/imgui_impl_opengl3.h>
 #include "Logger.h"
+#include "imgui/imgui.h"
 
 bool Framebuffer::Init(unsigned width, unsigned height)
 {

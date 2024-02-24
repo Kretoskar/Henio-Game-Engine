@@ -1,8 +1,5 @@
 ﻿#pragma once
-#include <vector>
-#include <glm/glm.hpp>
 #include <glad/glad.h>
-#include <GLFW/glfw3.h>
 #include "RenderData.h"
 
 class VertexBuffer

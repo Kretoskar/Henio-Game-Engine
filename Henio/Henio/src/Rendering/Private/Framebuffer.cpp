@@ -1,5 +1,5 @@
-﻿#include "Framebuffer.h"
-#include "Logger.h"
+﻿#include "Rendering//Public/Framebuffer.h"
+#include "Core/Public/Logger.h"
 #include "imgui/imgui.h"
 
 bool Framebuffer::Init(unsigned width, unsigned height)

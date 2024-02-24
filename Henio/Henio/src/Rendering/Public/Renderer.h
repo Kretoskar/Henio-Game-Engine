@@ -9,7 +9,7 @@
 #include "Texture.h"
 #include "Shader.h"
 #include "RenderData.h"
-#include "UserInterface.h"
+#include "UI/Public/UserInterface.h"
 
 class Window;
 

@@ -1,8 +1,8 @@
 ﻿#define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
 
-#include "Texture.h"
-#include "Logger.h"
+#include "Rendering/Public/Texture.h"
+#include "Core/Public/Logger.h"
 
 bool Texture::LoadTexture(std::string textureFilename)
 {

@@ -1,4 +1,4 @@
-﻿#include "Logger.h"
+﻿#include "Core/Public/Logger.h"
 
 unsigned int Logger::logLevel = 3;
 

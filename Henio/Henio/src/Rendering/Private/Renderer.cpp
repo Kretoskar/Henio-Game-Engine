@@ -1,7 +1,7 @@
-﻿#include "Renderer.h"
+﻿#include "Rendering/Public/Renderer.h"
 
-#include "Logger.h"
-#include "Window.h"
+#include "Core/Public/Logger.h"
+#include "Core/Public/Window.h"
 
 Renderer::Renderer(Window* window)
 {

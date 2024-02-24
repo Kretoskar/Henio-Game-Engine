@@ -1,4 +1,4 @@
-﻿#include "VertexBuffer.h"
+﻿#include "Rendering/Public/VertexBuffer.h"
 
 void VertexBuffer::Init()
 {

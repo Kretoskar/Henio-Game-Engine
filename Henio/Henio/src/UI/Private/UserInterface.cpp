@@ -1,7 +1,7 @@
 ﻿#include <string>
-#include "UserInterface.h"
+#include "UI/Public/UserInterface.h"
 
-#include "Window.h"
+#include "Core/Public/Window.h"
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"

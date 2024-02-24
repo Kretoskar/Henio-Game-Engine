@@ -1,5 +1,5 @@
-﻿#include "Window.h"
-#include "Logger.h"
+﻿#include "Core/Public/Window.h"
+#include "Core/Public/Logger.h"
 
 bool Window::Init(unsigned int width, unsigned int height, std::string title)
 {

@@ -1,8 +1,7 @@
-﻿#include "Shader.h"
+﻿#include "Rendering/Public/Shader.h"
 #include <fstream>
-#include "Shader.h"
 
-#include "Logger.h"
+#include "Core/Public/Logger.h"
 
 bool Shader::LoadShaders(std::string vertexShaderFileName, std::string fragmentShaderFileName)
 {

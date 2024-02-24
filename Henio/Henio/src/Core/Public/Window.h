@@ -4,8 +4,8 @@
 #include <memory>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "Renderer.h"
-#include "Model.h"
+#include "Rendering/Public/Renderer.h"
+#include "Rendering/Public/Model.h"
 
 
 class Window

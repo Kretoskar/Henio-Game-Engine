@@ -1,15 +1,9 @@
 #include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 #include <fstream>
 #include <string>
 #include <windows.h>
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 #include <stb/stb_image.h>
-
-#include <string>
 
 #include "Core/Public/Logger.h"
 #include "Core/Public/Window.h"
